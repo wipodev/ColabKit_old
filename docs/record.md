@@ -1,6 +1,6 @@
 # Record
 
-**Módulo `record` de PyColab: Grabación y Procesamiento de Audio en Google Colab**
+**Módulo `record` de ColabKit: Grabación y Procesamiento de Audio en Google Colab**
 
 Este módulo proporciona funciones para grabar audio en Google Colab, convertirlo a formato WAV y guardar el archivo resultante. También incluye herramientas para mostrar mensajes y notificaciones en el entorno de Google Colab.
 

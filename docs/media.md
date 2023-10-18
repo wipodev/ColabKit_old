@@ -1,6 +1,6 @@
 # Media
 
-**PyColab: Biblioteca de Funciones para Google Colab**
+**ColabKit: Biblioteca de Funciones para Google Colab**
 
 Este módulo proporciona funciones para Google Colab que simplifica el manejo de archivos multimedia, como videos y audios, y permite realizar tareas comunes de procesamiento de medios. Facilita la visualización de medios y ofrece herramientas para realizar operaciones como obtener la duración de un video, obtener la resolución de un video, convertir formatos de medios y recortar videos.
 

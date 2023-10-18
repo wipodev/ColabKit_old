@@ -1,6 +1,6 @@
 # Utils
 
-El módulo `utils` en PyColab proporciona varias funciones de utilidad que son útiles en el entorno de Google Colab. A continuación, te proporciono una descripción de cada una de las funciones:
+El módulo `utils` en ColabKit proporciona varias funciones de utilidad que son útiles en el entorno de Google Colab. A continuación, te proporciono una descripción de cada una de las funciones:
 
 1. **`remove_file(route)`**:
 

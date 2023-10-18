@@ -1,12 +1,12 @@
 import unittest
 from unittest.mock import patch, MagicMock
-from src.PyColab import media
+from src.ColabKit import media
 import ffmpeg
 
 class MediaTestCase(unittest.TestCase):
 
 
-    @patch('src.PyColab.media.VideoFileClip')
+    @patch('src.ColabKit.media.VideoFileClip')
     def test_video_duration(self, mock_video_file_clip):
         # Test case for a video file with a duration of 10.5 seconds
         mock_instance = mock_video_file_clip.return_value
@@ -15,7 +15,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the duration is correct
         self.assertEqual(duration, 10.5)
 
-    @patch('src.PyColab.media.VideoFileClip')
+    @patch('src.ColabKit.media.VideoFileClip')
     def test_get_video_resolution(self, mock_video_file_clip):
         # Test case for a video file with a resolution of 1920x1080
         mock_instance = mock_video_file_clip.return_value
@@ -34,7 +34,7 @@ class MediaTestCase(unittest.TestCase):
 
     @patch('ffmpeg.run')
     @patch('builtins.print')
-    @patch('src.PyColab.media.remove_file')
+    @patch('src.ColabKit.media.remove_file')
     def test_ffmpeg_proc_success(self, mock_remove_file, mock_print, mock_run):
         # Test case for a successful FFmpeg process
         mock_run.return_value = None
@@ -48,7 +48,7 @@ class MediaTestCase(unittest.TestCase):
 
     @patch('ffmpeg.run', side_effect=ffmpeg.Error("", "", stderr=b'Error occurred'))
     @patch('builtins.print')
-    @patch('src.PyColab.media.remove_file')
+    @patch('src.ColabKit.media.remove_file')
     def test_ffmpeg_proc_failure(self, mock_remove_file, mock_print, mock_run):
         # Test case for a failed FFmpeg process 
         result = media.ffmpeg_proc('output_stream', 'output_file', 'message')
@@ -59,7 +59,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         mock_remove_file.assert_called_with('output_file')
 
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=True)
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=True)
     @patch('builtins.print')
     def test_ffmpeg_conv_success(self, mock_print, mock_ffmpeg_proc):
         # Test case for a successful conversion
@@ -69,7 +69,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertTrue(result)
 
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=False)
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=False)
     @patch('builtins.print')
     def test_ffmpeg_conv_failure(self, mock_print, mock_ffmpeg_proc):
         # Test case for a failed conversion 
@@ -79,7 +79,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertFalse(result)
 
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=True)
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=True)
     @patch('builtins.print')
     def test_ffmpeg_trim_success(self, mock_print, mock_ffmpeg_proc):
         # Test case for a successful trim
@@ -89,7 +89,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertTrue(result)
 
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=False)
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=False)
     @patch('builtins.print')
     def test_ffmpeg_trim_failure(self, mock_print, mock_ffmpeg_proc):
         # Test case for a failed trim
@@ -99,8 +99,8 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertFalse(result)
 
-    @patch('src.PyColab.media.get_video_resolution', return_value=(1920, 1080))
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=True)
+    @patch('src.ColabKit.media.get_video_resolution', return_value=(1920, 1080))
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=True)
     @patch('builtins.print')
     def test_resize_video_success(self, mock_print, mock_ffmpeg_proc, mock_get_video_resolution):
         # Test case for a successful resize
@@ -110,8 +110,8 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertEqual(result, 'input_video_720p.mp4')
 
-    @patch('src.PyColab.media.get_video_resolution', return_value=(1280, 720))
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=True)
+    @patch('src.ColabKit.media.get_video_resolution', return_value=(1280, 720))
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=True)
     @patch('builtins.print')
     def test_resize_video_small_resolution(self, mock_print, mock_ffmpeg_proc, mock_get_video_resolution):
         # Test case for a successful resize
@@ -121,7 +121,7 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the remove_file function was called
         self.assertEqual(result, 'input_video.mp4')
 
-    @patch('src.PyColab.media.get_video_resolution', return_value=(640, 360))
+    @patch('src.ColabKit.media.get_video_resolution', return_value=(640, 360))
     @patch('builtins.print')
     def test_resize_video_no_need_to_change(self, mock_print, mock_get_video_resolution):
         # Test case for a successful resize
@@ -133,8 +133,8 @@ class MediaTestCase(unittest.TestCase):
         # Assert that the get_video_resolution function was called
         mock_get_video_resolution.assert_called_once_with('input_video.mp4')
 
-    @patch('src.PyColab.media.get_video_resolution', return_value=(1920, 1080))
-    @patch('src.PyColab.media.ffmpeg_proc', return_value=False)
+    @patch('src.ColabKit.media.get_video_resolution', return_value=(1920, 1080))
+    @patch('src.ColabKit.media.ffmpeg_proc', return_value=False)
     @patch('builtins.print')
     def test_resize_video_failure(self, mock_print, mock_ffmpeg_proc, mock_get_video_resolution):
         # Test case for a failed resize

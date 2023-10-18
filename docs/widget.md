@@ -1,6 +1,6 @@
 # Widget
 
-El módulo `widget` en PyColab proporciona una función llamada `generate_button` que se utiliza para generar botones interactivos en el entorno de Google Colab. Aquí tienes una descripción de la función `generate_button`:
+El módulo `widget` en ColabKit proporciona una función llamada `generate_button` que se utiliza para generar botones interactivos en el entorno de Google Colab. Aquí tienes una descripción de la función `generate_button`:
 
 - **`generate_button(text, tip, style, func, *param)`**:
   - Genera un botón interactivo en el entorno de Jupyter Notebook (o Google Colab) con la funcionalidad especificada.

@@ -1,19 +1,19 @@
 <p align="center">
-  <img src="PyColab.jpg" alt="PyColab logo" width="250" height="250">
+  <img src="ColabKit.jpg" alt="ColabKit logo" width="250" height="250">
 </p>
 
 ---
 
-# PyColab
+# ColabKit
 
-PyColab es una biblioteca de Python diseñada para mejorar la experiencia de trabajar en entornos de Jupyter Notebook y Google Colab. Con PyColab, puedes simplificar tareas comunes, manipular medios, grabar audio y crear widgets interactivos de manera más eficiente.
+ColabKit es una biblioteca de Python diseñada para mejorar la experiencia de trabajar en entornos de Jupyter Notebook y Google Colab. Con ColabKit, puedes simplificar tareas comunes, manipular medios, grabar audio y crear widgets interactivos de manera más eficiente.
 
 ## Instalación
 
-Puedes instalar PyColab fácilmente utilizando `pip`. Abre una terminal y ejecuta:
+Puedes instalar ColabKit fácilmente utilizando `pip`. Abre una terminal y ejecuta:
 
 ```bash
-pip install pycolab
+pip install ColabKit
 ```
 
 ## Características Principales
@@ -28,7 +28,7 @@ pip install pycolab
 ### Visualización de Video
 
 ```python
-from pycolab.media import showMedia
+from ColabKit.media import showMedia
 
 # Muestra un archivo de video
 showMedia('video.mp4', 'video')
@@ -37,7 +37,7 @@ showMedia('video.mp4', 'video')
 ### Grabación de Audio
 
 ```python
-from pycolab.record import record
+from ColabKit.record import record
 
 # Graba audio y guarda el resultado en un archivo WAV
 record('grabacion.wav')
@@ -46,7 +46,7 @@ record('grabacion.wav')
 ### Creación de Botones Interactivos
 
 ```python
-from pycolab.widget import generate_button
+from ColabKit.widget import generate_button
 
 # Crea un botón interactivo
 def mi_funcion():
@@ -57,11 +57,11 @@ generate_button("Hacer clic", "Haz clic para ejecutar mi_funcion", "success", mi
 
 ## Documentación
 
-Para obtener más información y documentación detallada, visita [el repositorio de PyColab en GitHub](https://github.com/wipodev/pycolab).
+Para obtener más información y documentación detallada, visita [el repositorio de ColabKit en GitHub](https://github.com/wipodev/ColabKit).
 
 ## Contribuciones
 
-¡Apreciamos las contribuciones! Si deseas contribuir o informar sobre problemas, visita [nuestro repositorio en GitHub](https://github.com/wipodev/pycolab).
+¡Apreciamos las contribuciones! Si deseas contribuir o informar sobre problemas, visita [nuestro repositorio en GitHub](https://github.com/wipodev/ColabKit).
 
 ## Licencia
 

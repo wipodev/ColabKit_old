@@ -3,5 +3,5 @@ env
 build
 dist
 __pycache__
-PyColab.egg-info
+ColabKit.egg-info
 release.md

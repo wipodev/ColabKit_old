@@ -1,14 +1,14 @@
 <p align="center">
-  <img src="../PyColab.jpg" alt="PyColab logo" width="250" height="250">
+  <img src="../ColabKit.jpg" alt="ColabKit logo" width="250" height="250">
 </p>
 
-# **PyColab**
+# **ColabKit**
 
-PyColab es una librería de Python diseñada para simplificar y mejorar tu experiencia de programación en Google Colab. Ofrece un conjunto de funciones y utilidades comunes para trabajar de manera eficiente con las características y herramientas de Colab. Con PyColab, puedes realizar tareas básicas como manipulación de medios, grabación de audio, generación de widgets interactivos, utilidades de sistema y visualización interactiva de video y audio de una manera fácil y conveniente.
+ColabKit es una librería de Python diseñada para simplificar y mejorar tu experiencia de programación en Google Colab. Ofrece un conjunto de funciones y utilidades comunes para trabajar de manera eficiente con las características y herramientas de Colab. Con ColabKit, puedes realizar tareas básicas como manipulación de medios, grabación de audio, generación de widgets interactivos, utilidades de sistema y visualización interactiva de video y audio de una manera fácil y conveniente.
 
-¡Simplifica tu flujo de trabajo en Google Colab con PyColab y aprovecha al máximo esta plataforma de programación en la nube!
+¡Simplifica tu flujo de trabajo en Google Colab con ColabKit y aprovecha al máximo esta plataforma de programación en la nube!
 
-A continuación, se presenta una descripción general de los módulos y funciones disponibles en PyColab:
+A continuación, se presenta una descripción general de los módulos y funciones disponibles en ColabKit:
 
 **Módulo `media`**:
 
@@ -42,4 +42,4 @@ A continuación, se presenta una descripción general de los módulos y funcione
 - Los botones se pueden personalizar con texto, estilos y funcionalidades específicas, y se pueden utilizar para interactuar con código personalizado en la notebook.
 - La función `generate_button` facilita la creación de widgets interactivos para ejecutar funciones personalizadas en respuesta a eventos de clic.
 
-En resumen, PyColab es una biblioteca versátil que simplifica muchas tareas comunes en Google Colab, desde la manipulación de medios hasta la grabación de audio y la creación de widgets interactivos. Está diseñada para mejorar la productividad y facilitar el desarrollo de proyectos en estos entornos de notebook. Las funciones proporcionadas en los módulos de PyColab son herramientas útiles que pueden acelerar el flujo de trabajo en proyectos de análisis de datos, desarrollo de aplicaciones y más.
+En resumen, ColabKit es una biblioteca versátil que simplifica muchas tareas comunes en Google Colab, desde la manipulación de medios hasta la grabación de audio y la creación de widgets interactivos. Está diseñada para mejorar la productividad y facilitar el desarrollo de proyectos en estos entornos de notebook. Las funciones proporcionadas en los módulos de ColabKit son herramientas útiles que pueden acelerar el flujo de trabajo en proyectos de análisis de datos, desarrollo de aplicaciones y más.
