@@ -6,65 +6,67 @@
 
 # ColabKit
 
-ColabKit es una biblioteca de Python diseñada para mejorar la experiencia de trabajar en entornos de Jupyter Notebook y Google Colab. Con ColabKit, puedes simplificar tareas comunes, manipular medios, grabar audio y crear widgets interactivos de manera más eficiente.
+We have officially renamed the PyColab library to ColabKit to avoid conflicts with another existing package on PyPI. We appreciate your understanding and continued support.
 
-## Instalación
+ColabKit is a Python library designed to enhance the experience of working in Jupyter Notebook and Google Colab environments. With ColabKit, you can simplify common tasks, manipulate media, record audio, and create interactive widgets more efficiently.
 
-Puedes instalar ColabKit fácilmente utilizando `pip`. Abre una terminal y ejecuta:
+## Installation
+
+You can easily install ColabKit using `pip`. Open a terminal and run:
 
 ```bash
 pip install ColabKit
 ```
 
-## Características Principales
+## Key Features
 
-- **Manipulación de Medios**: Visualiza y modifica archivos de video y audio directamente en tu notebook.
-- **Grabación de Audio**: Graba audio en tiempo real a través de tu navegador con una simple función.
-- **Widgets Interactivos**: Crea botones interactivos en la notebook para ejecutar código personalizado.
-- **Utilidades de Sistema**: Simplifica tareas comunes, como eliminar archivos y verificar la existencia de archivos.
+- **Media Manipulation**: Visualize and edit video and audio files directly in your notebook.
+- **Audio Recording**: Record real-time audio through your browser with a simple function.
+- **Interactive Widgets**: Create interactive buttons in the notebook to execute custom code.
+- **System Utilities**: Simplify common tasks, such as file deletion and file existence checks.
 
-## Ejemplos de Uso
+## Usage Examples
 
-### Visualización de Video
+### Video Display
 
 ```python
 from ColabKit.media import showMedia
 
-# Muestra un archivo de video
+# Display a video file
 showMedia('video.mp4', 'video')
 ```
 
-### Grabación de Audio
+### Audio Recording
 
 ```python
 from ColabKit.record import record
 
-# Graba audio y guarda el resultado en un archivo WAV
-record('grabacion.wav')
+# Record audio and save the result to a WAV file
+record('recording.wav')
 ```
 
-### Creación de Botones Interactivos
+### Creating Interactive Buttons
 
 ```python
 from ColabKit.widget import generate_button
 
-# Crea un botón interactivo
-def mi_funcion():
-    print("¡Hiciste clic en el botón!")
+# Create an interactive button
+def my_function():
+    print("You clicked the button!")
 
-generate_button("Hacer clic", "Haz clic para ejecutar mi_funcion", "success", mi_funcion)
+generate_button("Click Me", "Click to execute my_function", "success", my_function)
 ```
 
-## Documentación
+## Documentation
 
-Para obtener más información y documentación detallada, visita [el repositorio de ColabKit en GitHub](https://github.com/wipodev/ColabKit).
+For more information and detailed documentation, visit [the ColabKit repository on GitHub](https://github.com/wipodev/ColabKit).
 
-## Contribuciones
+## Contributions
 
-¡Apreciamos las contribuciones! Si deseas contribuir o informar sobre problemas, visita [nuestro repositorio en GitHub](https://github.com/wipodev/ColabKit).
+We appreciate contributions! If you wish to contribute or report issues, visit [our GitHub repository](https://github.com/wipodev/ColabKit).
 
-## Licencia
+## License
 
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para obtener más detalles.
+This project is under the MIT License. See the [LICENSE](https://github.com/wipodev/ColabKit/blob/main/LICENSE) file for more details.
 
 ---
