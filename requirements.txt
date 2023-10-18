@@ -1,0 +1,6 @@
+ffmpeg-python==0.2.0
+ipython==8.16.1
+ipywidgets==8.1.1
+moviepy==1.0.3
+numpy==1.26.1
+scipy==1.11.3
