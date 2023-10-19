@@ -1,4 +1,4 @@
-# ColabKit V-0.0.2 - Lanzamiento con Cambio de Nombre
+# Lanzamiento con Cambio de Nombre
 
 En este lanzamiento, ColabKit (anteriormente PyColab) te trae las últimas actualizaciones y características en una librería de Python diseñada para simplificar tu trabajo en entornos de Google Colab. ColabKit ofrece una colección de módulos que incluyen herramientas para la manipulación de medios, la grabación de audio, la gestión de archivos y la creación de widgets interactivos en tus cuadernos de Colab.
 

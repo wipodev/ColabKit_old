@@ -27,16 +27,16 @@ jobs:
       - name: Build the wheel
         run: python setup.py sdist bdist_wheel
 
-      - name: Publish to Test PyPI (dev branch)
-        if: contains(github.ref_name, 'dev')
-        run: twine upload --repository testpypi dist/*.whl --username __token__ --password ${{ secrets.TEST_PYPI_API_TOKEN }}
+      #- name: Publish to Test PyPI (dev version)
+      #  if: contains(github.ref_name, 'dev')
+      #  run: twine upload --repository testpypi dist/*.whl --username __token__ --password ${{ secrets.TEST_PYPI_API_TOKEN }}
 
-      #- name: Publish to PyPI (main branch)
+      #- name: Publish to PyPI (release version)
       #  if: ${{ ! contains(github.ref_name, 'dev') }}
       #  run: twine upload dist/*.whl --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
 
       - name: Create release
-        #if: contains(github.ref_name, 'dev')
+        if: ${{ ! contains(github.ref_name, 'dev') }}
         uses: softprops/action-gh-release@v1
         with:
           name: ColabKit ${{ github.ref_name }}
