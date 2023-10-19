@@ -28,7 +28,7 @@ jobs:
 
       - name: Obtener Nombre de Rama
         if: ${{ ! endsWith(github.ref_name, '-dev') }}
-        run: echo "Tag actual ${{ (github.ref_name }}"
+        run: echo "Tag actual ${{ github.ref_name }}"
 
       - name: Publish to Test PyPI (dev branch)
         if: github.ref == 'refs/heads/dev'
