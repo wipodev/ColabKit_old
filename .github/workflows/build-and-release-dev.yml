@@ -49,7 +49,7 @@ jobs:
       - name: Download binaries
         uses: actions/download-artifact@v3
         with:
-          patch: "dist/"
+          path: "dist/"
 
       - name: Create release
         uses: softprops/action-gh-release@v1
