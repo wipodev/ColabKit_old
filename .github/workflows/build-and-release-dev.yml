@@ -13,6 +13,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
       - name: Set up Python
         uses: actions/setup-python@v3
         with:
@@ -26,26 +27,25 @@ jobs:
       - name: Build the wheel
         run: python setup.py sdist bdist_wheel
 
-      - name: Obtener Nombre de Rama
-        if: ${{ ! endsWith(github.ref_name, '-dev') }}
-        run: echo "Tag actual ${{ github.ref_name }}"
-
       - name: Publish to Test PyPI (dev branch)
-        if: github.ref == 'refs/heads/dev'
+        if: endsWith(github.ref_name, '-dev')
         run: twine upload --repository testpypi dist/*.whl --username __token__ --password ${{ secrets.TEST_PYPI_API_TOKEN }}
 
-      - name: Publish to PyPI (main branch)
-        if: github.ref == 'refs/heads/main'
-        run: twine upload dist/*.whl --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
+      #- name: Publish to PyPI (main branch)
+      #  if: ${{ ! endsWith(github.ref_name, '-dev') }}
+      #  run: twine upload dist/*.whl --username __token__ --password ${{ secrets.PYPI_API_TOKEN }}
 
   release:
     name: Release
     needs: build
-    if: github.ref == 'refs/heads/main'
+    #if: ${{ ! endsWith(github.ref_name, '-dev') }}
+    if: endsWith(github.ref_name, '-dev')
     runs-on: ubuntu-latest
+
     steps:
       - name: Download binaries
         uses: actions/download-artifact@v2
+
       - name: Create release
         uses: softprops/action-gh-release@v1
         with:
