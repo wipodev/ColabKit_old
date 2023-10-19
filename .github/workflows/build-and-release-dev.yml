@@ -26,12 +26,9 @@ jobs:
       - name: Build the wheel
         run: python setup.py sdist bdist_wheel
 
-      - name: Ver Referencia de Git
-        run: echo 'Referencia de steps.parse-branch.outputs.branch de Git ${{ steps.parse-branch.outputs.branch }}'
       - name: Obtener Nombre de Rama
-        run: |
-          echo "github.ref otra forma ${{ github.ref }}"
-          echo "refs\/heads\/// nueva forma ${{ github.ref }} | sed 's/refs\/heads\///'"
+        if: endsWith(github.ref, '-dev')
+        run: echo "Tag actual ${{ github.ref }} y actual branch ${{ github.ref_name }} pepe ${{ github }}"
 
       - name: Publish to Test PyPI (dev branch)
         if: github.ref == 'refs/heads/dev'
